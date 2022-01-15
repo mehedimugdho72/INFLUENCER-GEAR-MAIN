@@ -1,0 +1,618 @@
+                                                                                                                                /* -----------------
+    Google Fonts
+------------------ */
+                                                                                                                            
+                                                                                                                            @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;800&display=swap');
+                                                                                                                            /* -----------------------
+    Base and common code
+------------------------*/
+                                                                                                                            
+                                                                                                                            * {
+                                                                                                                                padding: 0;
+                                                                                                                                margin: 0;
+                                                                                                                                box-sizing: border-box;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            body {
+                                                                                                                                max-width: 1400px;
+                                                                                                                                font-family: 'Nunito', sans-serif;
+                                                                                                                                font-size: 18px;
+                                                                                                                                overflow-x: hidden;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .container {
+                                                                                                                                width: 90%;
+                                                                                                                                margin: 0 auto;
+                                                                                                                                min-height: 100vh;
+                                                                                                                                display: flex;
+                                                                                                                                justify-content: center;
+                                                                                                                                align-items: center;
+                                                                                                                                flex-direction: column;
+                                                                                                                                padding: 1.2rem;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            p {
+                                                                                                                                font-size: 1rem;
+                                                                                                                                color: #333300;
+                                                                                                                                font-size: 1rem;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            a {
+                                                                                                                                text-decoration: none;
+                                                                                                                                font-size: 1rem;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            li {
+                                                                                                                                list-style: none;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .primary--color {
+                                                                                                                                color: var(--primary-color);
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .btn {
+                                                                                                                                padding: 0.4rem 0.6rem;
+                                                                                                                                color: var(--white-color);
+                                                                                                                                border-radius: 30px;
+                                                                                                                                font-weight: 700;
+                                                                                                                                background-color: var(--primary-color);
+                                                                                                                                transition: all 350ms ease-in-out;
+                                                                                                                                border: 1px solid var(--primary-color);
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .btn:hover {
+                                                                                                                                color: var(--primary-color);
+                                                                                                                                background: transparent;
+                                                                                                                            }
+                                                                                                                            /* ------------------
+    custom property
+------------------ */
+                                                                                                                            
+                                                                                                                             :root {
+                                                                                                                                --accent-color: #1a1a1a;
+                                                                                                                                --gradient-color: linear-gradient(90deg, #6a1b4d, #ff6666);
+                                                                                                                                --primary-color: #ff0000;
+                                                                                                                                --heading-color: #120e43;
+                                                                                                                                --white-color: #fff;
+                                                                                                                                --box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+                                                                                                                            }
+                                                                                                                            /* ---------------
+    Header
+--------------- */
+                                                                                                                            
+                                                                                                                            .header {
+                                                                                                                                width: 90%;
+                                                                                                                                background-color: var(--heading-color);
+                                                                                                                                margin: 0 auto;
+                                                                                                                                padding: 1.2rem;
+                                                                                                                                height: fit-content;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .navigation {
+                                                                                                                                display: flex;
+                                                                                                                                justify-content: space-between;
+                                                                                                                                align-items: center;
+                                                                                                                                padding: 0.8rem 0;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .brand--name {
+                                                                                                                                font-size: 1.3rem;
+                                                                                                                                font-weight: 800;
+                                                                                                                                border: 1px solid var(--primary-color);
+                                                                                                                                padding: 0.1rem 0.3rem;
+                                                                                                                                color: var(--primary-color);
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .nav--menu {
+                                                                                                                                display: flex;
+                                                                                                                                color: var(--primary-color);
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .nav--item {
+                                                                                                                                margin-left: 2.2rem;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .nav--item .nav--list {
+                                                                                                                                font-size: 1rem;
+                                                                                                                                font-weight: 500;
+                                                                                                                                letter-spacing: 1px;
+                                                                                                                                color: #009933;
+                                                                                                                                position: relative;
+                                                                                                                                transition: color 2s ease-in-out;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .nav--item .nav--list:hover {
+                                                                                                                                color: var(--secondary-color);
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .nav--item .nav--list::before {
+                                                                                                                                position: absolute;
+                                                                                                                                content: '';
+                                                                                                                                left: 0;
+                                                                                                                                right: 0;
+                                                                                                                                bottom: -4px;
+                                                                                                                                width: 100%;
+                                                                                                                                height: 3px;
+                                                                                                                                background-color: var(--primary-color);
+                                                                                                                                transform: scale(1.5);
+                                                                                                                                transition: transform 2s ease-in-out;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .nav--item .nav--list:hover::before {
+                                                                                                                                transform: scale(1);
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .nav--item .nav__different__list {
+                                                                                                                                font-size: 1.4rem;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .nav--item .nav__different__list::before {
+                                                                                                                                background-color: transparent;
+                                                                                                                            }
+                                                                                                                            /* ----Nav toggler---- */
+                                                                                                                            
+                                                                                                                            #nav--toggle {
+                                                                                                                                display: none;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .nav--toggle--icon {
+                                                                                                                                display: none;
+                                                                                                                                color: var(--primary-color);
+                                                                                                                                font-size: 1.2rem;
+                                                                                                                                border: 1px solid var(--primary-color);
+                                                                                                                                padding: 0 0.2rem;
+                                                                                                                            }
+                                                                                                                            /* ----------------
+     Section
+---------------- */
+                                                                                                                            
+                                                                                                                            .grid {
+                                                                                                                                display: grid;
+                                                                                                                                grid-template-columns: repeat(2, 1fr);
+                                                                                                                                grid-column-gap: 1.2rem;
+                                                                                                                                grid-row-gap: 1.2rem;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .hero--info {
+                                                                                                                                animation: HomeSlideLeft 2s ease-in-out;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .hero--heading {
+                                                                                                                                font-size: 52px;
+                                                                                                                                color: var(--heading-color);
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .description {
+                                                                                                                                font-size: 1rem;
+                                                                                                                                font-weight: 500;
+                                                                                                                                color: var(--accent-color);
+                                                                                                                                text-align: justify;
+                                                                                                                                padding: 1rem 2rem 1rem 0;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .hero--img--box {
+                                                                                                                                margin-left: 4rem;
+                                                                                                                                animation: HomeSlideRight 2s ease-in-out;
+                                                                                                                            }
+                                                                                                                            /* -----------------
+    Company 
+---------------- */
+                                                                                                                            
+                                                                                                                            .company--container {
+                                                                                                                                width: 91%;
+                                                                                                                                height: fit-content;
+                                                                                                                                margin: 2rem auto;
+                                                                                                                                padding: 0rem;
+                                                                                                                                border-top: 1px solid #f200d2;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .flex {
+                                                                                                                                display: flex;
+                                                                                                                                flex-wrap: wrap;
+                                                                                                                                gap: 1.2rem;
+                                                                                                                                justify-content: space-between;
+                                                                                                                                align-items: center;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .company--brand--name {
+                                                                                                                                margin-bottom: 1rem;
+                                                                                                                            }
+                                                                                                                            /* ------------------
+  Product collection
+--------------------- */
+                                                                                                                            
+                                                                                                                            .collection--heading {
+                                                                                                                                font-size: 1.8rem;
+                                                                                                                                margin: 3rem 0;
+                                                                                                                                padding: 0 0.4rem;
+                                                                                                                                line-height: 0.8;
+                                                                                                                                border-left: 3px solid var(--primary-color);
+                                                                                                                                border-right: 3px solid var(--primary-color);
+                                                                                                                                color: var(--heading-color);
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .product--grid {
+                                                                                                                                grid-template-columns: repeat(3, 1fr);
+                                                                                                                                grid-gap: 40px;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .product--box {
+                                                                                                                                border: 15px solid var(--white-color);
+                                                                                                                                box-shadow: var(--box-shadow);
+                                                                                                                                border-radius: 10px;
+                                                                                                                                overflow: hidden;
+                                                                                                                                transition: transform 250ms ease-in-out;
+                                                                                                                                border-bottom: 3px solid var(--primary-color);
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .product--box:hover {
+                                                                                                                                transform: skew(1deg);
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .product--img {
+                                                                                                                                transition: transform 250ms ease-in-out;
+                                                                                                                                margin-bottom: 1rem;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .product--box:hover .product--img {
+                                                                                                                                transform: scale(1.1);
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .product--heading {
+                                                                                                                                font-size: 1.7rem;
+                                                                                                                                margin-bottom: 0.2rem;
+                                                                                                                                color: var(--heading-color);
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .product--price {
+                                                                                                                                font-size: 1.4rem;
+                                                                                                                                color: var(--accent-color);
+                                                                                                                                font-weight: 700;
+                                                                                                                                margin-bottom: 0.2rem;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .rating {
+                                                                                                                                display: flex;
+                                                                                                                                justify-content: flex-start;
+                                                                                                                                margin-bottom: 0.4rem;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .star {
+                                                                                                                                color: gold;
+                                                                                                                                margin-right: 0.6rem;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .box--small--text {
+                                                                                                                                margin-bottom: 0.4rem;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .below--link--btn {
+                                                                                                                                margin-top: 1.2rem;
+                                                                                                                                width: 100%;
+                                                                                                                                text-align: end;
+                                                                                                                                margin-right: 7rem;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .product--link--btn {
+                                                                                                                                font-size: 1rem;
+                                                                                                                                font-weight: 700;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .product--link--btn:hover {
+                                                                                                                                color: var(--primary-color);
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .about--btn {
+                                                                                                                                background-color: var(--white-color);
+                                                                                                                                color: var(--primary-color);
+                                                                                                                                border: none;
+                                                                                                                                padding: 0.2rem 0.5rem;
+                                                                                                                                border-radius: 20px;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            h1,
+                                                                                                                            h2,
+                                                                                                                            h3,
+                                                                                                                            h4,
+                                                                                                                            h5,
+                                                                                                                            h6 {}
+                                                                                                                            
+                                                                                                                            section {
+                                                                                                                                padding: 60px 0;
+                                                                                                                                min-height: 100vh;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            a,
+                                                                                                                            a:hover,
+                                                                                                                            a:focus,
+                                                                                                                            a:active {
+                                                                                                                                text-decoration: none;
+                                                                                                                                outline: none;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            a,
+                                                                                                                            a:active,
+                                                                                                                            a:focus {
+                                                                                                                                color: #6f6f6f;
+                                                                                                                                text-decoration: none;
+                                                                                                                                transition-timing-function: ease-in-out;
+                                                                                                                                -ms-transition-timing-function: ease-in-out;
+                                                                                                                                -moz-transition-timing-function: ease-in-out;
+                                                                                                                                -webkit-transition-timing-function: ease-in-out;
+                                                                                                                                -o-transition-timing-function: ease-in-out;
+                                                                                                                                transition-duration: .2s;
+                                                                                                                                -ms-transition-duration: .2s;
+                                                                                                                                -moz-transition-duration: .2s;
+                                                                                                                                -webkit-transition-duration: .2s;
+                                                                                                                                -o-transition-duration: .2s;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            ul {
+                                                                                                                                margin: 0;
+                                                                                                                                padding: 0;
+                                                                                                                                list-style: none;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            img {
+                                                                                                                                max-width: 100%;
+                                                                                                                                height: auto;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .section-title h2 {
+                                                                                                                                font-size: 36px;
+                                                                                                                                font-weight: 700;
+                                                                                                                                background-image: -webkit-linear-gradient(-30deg, #052157 0%, #91039f 100%);
+                                                                                                                                -webkit-background-clip: text;
+                                                                                                                                -webkit-text-fill-color: transparent;
+                                                                                                                                margin-bottom: 14px;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .newsletter {
+                                                                                                                                padding: 16% 0 5%;
+                                                                                                                                background: url(https://i.ibb.co/JRrHmhv/shanghai.jpg) no-repeat center center;
+                                                                                                                                background-size: cover;
+                                                                                                                                position: relative;
+                                                                                                                                z-index: 2;
+                                                                                                                                min-height: 100vh;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .newsletter:after {
+                                                                                                                                position: absolute;
+                                                                                                                                content: '';
+                                                                                                                                left: 0;
+                                                                                                                                top: 0;
+                                                                                                                                width: 100%;
+                                                                                                                                height: 100%;
+                                                                                                                                background: -webkit-linear-gradient(-30deg, #91039f 0%, #052157 100%);
+                                                                                                                                opacity: .8;
+                                                                                                                                z-index: -1;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .newsletter .section-title {
+                                                                                                                                margin-bottom: 59px;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .newsletter .section-title h2 {
+                                                                                                                                background-image: -webkit-linear-gradient(-30deg, #ffffff 0%, #ffffff 100%);
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .newsletter .section-title p {
+                                                                                                                                color: #fff;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .newsletter .newsletter-form {
+                                                                                                                                background: -webkit-linear-gradient(-30deg, #91039f 0%, #052157 100%);
+                                                                                                                                position: relative;
+                                                                                                                                height: 60px;
+                                                                                                                                z-index: 2;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .newsletter .newsletter-form:after {
+                                                                                                                                position: absolute;
+                                                                                                                                content: '';
+                                                                                                                                left: -2px;
+                                                                                                                                right: -2px;
+                                                                                                                                top: -2px;
+                                                                                                                                bottom: -2px;
+                                                                                                                                background: -webkit-linear-gradient(-30deg, #91039f 0%, #91039f 100%);
+                                                                                                                                z-index: -1;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .newsletter .newsletter-form input {
+                                                                                                                                width: 100%;
+                                                                                                                                height: 100%;
+                                                                                                                                border: none;
+                                                                                                                                padding: 30px;
+                                                                                                                                background: #3f1667;
+                                                                                                                                color: #fff;
+                                                                                                                                padding-right: 200px;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .newsletter .newsletter-form input::-webkit-input-placeholder {
+                                                                                                                                color: #fff;
+                                                                                                                                opacity: .6;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .newsletter .newsletter-form input:-ms-input-placeholder {
+                                                                                                                                color: #fff;
+                                                                                                                                opacity: .6;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .newsletter .newsletter-form input::-ms-input-placeholder {
+                                                                                                                                color: #fff;
+                                                                                                                                opacity: .6;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .newsletter .newsletter-form input::placeholder {
+                                                                                                                                color: #fff;
+                                                                                                                                opacity: .6;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .newsletter .newsletter-form button {
+                                                                                                                                position: absolute;
+                                                                                                                                top: -2px;
+                                                                                                                                right: -2px;
+                                                                                                                                bottom: -2px;
+                                                                                                                                width: 170px;
+                                                                                                                                background: -webkit-linear-gradient(-30deg, #91039f 0%, #052157 100%);
+                                                                                                                                outline: none;
+                                                                                                                                border: none;
+                                                                                                                                color: #fff;
+                                                                                                                                font-weight: 500;
+                                                                                                                                cursor: pointer;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .newsletter .newsletter-form button:hover {
+                                                                                                                                background: -webkit-linear-gradient(-30deg, #052157 0%, #91039f 100%);
+                                                                                                                            }
+                                                                                                                            /* -------------
+                                    Footer
+                               -------------- */
+                                                                                                                            
+                                                                                                                            .footer {
+                                                                                                                                width: 90%;
+                                                                                                                                background-color: var(--heading-color);
+                                                                                                                                margin: 0 auto;
+                                                                                                                                text-align: center;
+                                                                                                                                padding: 1rem 0;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .footer--heading {
+                                                                                                                                color: var(--white-color);
+                                                                                                                                font-size: 1.8rem;
+                                                                                                                                margin: 0.5rem 0;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .footer--description {
+                                                                                                                                color: var(--white-color);
+                                                                                                                                font-size: 1rem;
+                                                                                                                                margin-bottom: 0.4rem;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .social--icon {
+                                                                                                                                font-size: 1.8rem;
+                                                                                                                                color: var(--white-color);
+                                                                                                                                transition: color 250ms ease-in-out;
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            .social--icon:hover {
+                                                                                                                                color: var(--primary-color);
+                                                                                                                            }
+                                                                                                                            /*<<<<<<--------------
+    animation
+------------->>>>>>> */
+                                                                                                                            
+                                                                                                                            @keyframes HomeSlideLeft {
+                                                                                                                                0% {
+                                                                                                                                    transform: translateX(-100%);
+                                                                                                                                }
+                                                                                                                                100% {
+                                                                                                                                    transform: translateX(0);
+                                                                                                                                }
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            @keyframes HomeSlideRight {
+                                                                                                                                0% {
+                                                                                                                                    transform: translateX(100%);
+                                                                                                                                }
+                                                                                                                                100% {
+                                                                                                                                    transform: translateX(0);
+                                                                                                                                }
+                                                                                                                            }
+                                                                                                                            
+                                                                                                                            @keyframes toggler {
+                                                                                                                                0% {
+                                                                                                                                    transform: translateX(-100%);
+                                                                                                                                }
+                                                                                                                                100% {
+                                                                                                                                    transform: translateX(0);
+                                                                                                                                }
+                                                                                                                            }
+                                                                                                                            /*<<<<<------------
+Responsive
+---------------->>> */
+                                                                                                                            /* tablet design with little bit phone  */
+                                                                                                                            
+                                                                                                                            @media (max-width: 868px) {
+                                                                                                                                .nav--toggle--icon {
+                                                                                                                                    display: block;
+                                                                                                                                }
+                                                                                                                                .header {
+                                                                                                                                    margin-bottom: 5.5rem;
+                                                                                                                                }
+                                                                                                                                .nav--menu {
+                                                                                                                                    position: absolute;
+                                                                                                                                    top: 80px;
+                                                                                                                                    left: 0;
+                                                                                                                                    width: 100%;
+                                                                                                                                    flex-direction: column;
+                                                                                                                                    align-items: center;
+                                                                                                                                    transform: translateX(-460px);
+                                                                                                                                    transition: transform 0.5s ease-in-out;
+                                                                                                                                }
+                                                                                                                                .nav--item {
+                                                                                                                                    margin-bottom: 0.4rem;
+                                                                                                                                }
+                                                                                                                                #nav--toggle:checked~.nav--menu {
+                                                                                                                                    transform: translateX(0);
+                                                                                                                                    animation: toggler 2s ease-in-out;
+                                                                                                                                }
+                                                                                                                                /* Hero */
+                                                                                                                                .grid {
+                                                                                                                                    grid-template-columns: 1fr;
+                                                                                                                                    /* text-align: center; */
+                                                                                                                                }
+                                                                                                                                .hero--info {
+                                                                                                                                    order: 2;
+                                                                                                                                }
+                                                                                                                                .hero--heading {
+                                                                                                                                    font-size: 40px;
+                                                                                                                                }
+                                                                                                                                .hero--img--box {
+                                                                                                                                    text-align: center;
+                                                                                                                                    margin: 1rem 0;
+                                                                                                                                }
+                                                                                                                                .hero--img--box .hero--img {
+                                                                                                                                    width: 60%;
+                                                                                                                                }
+                                                                                                                                /* product */
+                                                                                                                                .rating {
+                                                                                                                                    justify-content: center;
+                                                                                                                                }
+                                                                                                                                .product--grid {
+                                                                                                                                    grid-template-columns: repeat(2, 1fr);
+                                                                                                                                }
+                                                                                                                                .none {
+                                                                                                                                    display: none;
+                                                                                                                                }
+                                                                                                                                .below--link--btn {
+                                                                                                                                    margin-right: 0;
+                                                                                                                                }
+                                                                                                                                .about--img {
+                                                                                                                                    width: 100%;
+                                                                                                                                }
+                                                                                                                                .about--background {
+                                                                                                                                    text-align: center;
+                                                                                                                                    transform: skew(0deg);
+                                                                                                                                }
+                                                                                                                            }
+                                                                                                                            /* Mobile  */
+                                                                                                                            
+                                                                                                                            @media (max-width: 600px) {
+                                                                                                                                .product--grid {
+                                                                                                                                    grid-template-columns: 1fr;
+                                                                                                                                }
+                                                                                                                                .none {
+                                                                                                                                    display: block;
+                                                                                                                                }
+                                                                                                                                .hero--info {
+                                                                                                                                    text-align: center;
+                                                                                                                                }
+                                                                                                                                .below--link--btn {
+                                                                                                                                    margin-right: 2.2rem;
+                                                                                                                                }
+                                                                                                                                .about--background {
+                                                                                                                                    text-align: center;
+                                                                                                                                    transform: scale(1.5);
+                                                                                                                                    rotate(60eg);
+                                                                                                                                }
